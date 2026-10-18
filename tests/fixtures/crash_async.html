@@ -1,0 +1,4 @@
+<!doctype html><title>crash</title><script>
+// compiles fine, crashes later inside an async callback => unhandled rejection; the UI just never appears
+document.fonts.ready.then(() => { Phaser.Math.Between(0, 1); });
+</script>
